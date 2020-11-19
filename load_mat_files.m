@@ -1,6 +1,8 @@
-function [outputArg1,outputArg2] = load_mat_files(inputArg1,inputArg2)
+function [holdercells] = load_mat_files
 %UNTITLED3 Summary of this function goes here
 %   Detailed explanation goes here
+folder = uigetdir(matlabroot , 'Choose folder to analyze');
+cd(folder);
 filePattern = fullfile(folder, '*.mat');
 matfiles = dir(filePattern);
 count = length(matfiles);
@@ -12,7 +14,5 @@ for f = 1:count;
     holdercells(1, f) = {currkeeper.(name)};
 end
 
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
 end
 
