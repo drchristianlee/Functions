@@ -1,4 +1,4 @@
-function [holdercells] = load_mat_files
+function holdercells = load_mat_files
 %UNTITLED3 Summary of this function goes here
 %   Detailed explanation goes here
 folder = uigetdir(matlabroot , 'Choose folder to analyze');
